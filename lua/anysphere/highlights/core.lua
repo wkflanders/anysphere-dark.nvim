@@ -8,7 +8,7 @@ return function(hl, c, o, S)
 	hl.SignColumn = { bg = c.bg }
 	hl.VertSplit = { fg = c.border, bg = c.bg }
 	hl.WinSeparator = { fg = c.border, bg = c.bg }
-	hl.LineNr = { fg = "#555555" }
+	hl.LineNr = { fg = "#535353" }
 	hl.CursorLineNr = { fg = c.fg, bold = true }
 	hl.CursorLine = { bg = c.bg_alt }
 	hl.CursorColumn = { bg = c.bg_alt }
@@ -31,45 +31,42 @@ return function(hl, c, o, S)
 	hl.ErrorMsg = { fg = c.red, bold = true }
 	hl.WarningMsg = { fg = c.orange }
 	hl.MoreMsg = { fg = c.gold }
-	hl.Question = { fg = c.cyan }
+	hl.Question = { fg = c.blue }
 	hl.QuickFixLine = { bg = "#1c1c1c", bold = true }
-
 	hl.Comment = S_({ fg = c.comment, italic = true }, "comments")
-	hl.Constant = S_({ fg = c.orange }, "constant")
-	hl.String = S_({ fg = "#E0A9E0" }, "strings")
-	hl.Character = { fg = "#E0A9E0" }
-	hl.Number = S_({ fg = c.orange }, "number")
+	hl.Constant = S_({ fg = c.yellow }, "constant")
+	hl.String = S_({ fg = c.string }, "strings")
+	hl.Character = { fg = c.string }
+	hl.Number = S_({ fg = c.number }, "number")
 	hl.Boolean = S_({ fg = c.cyan }, "boolean")
 	hl.Identifier = S_({ fg = c.fg }, "variables")
-	hl.Function = S_({ fg = c.gold }, "functions")
-	hl.Statement = { fg = c.cyan }
-	hl.Conditional = S_({ fg = c.cyan }, "conditionals")
-	hl.Repeat = { fg = c.cyan }
+	hl.Function = S_({ fg = c.function_fg }, "functions")
+	hl.Statement = { fg = c.teal }
+	hl.Conditional = S_({ fg = c.teal }, "conditionals")
+	hl.Repeat = { fg = c.teal }
 	hl.Label = { fg = c.magenta }
 	hl.Operator = S_({ fg = c.fg }, "operators")
-	hl.Keyword = S_({ fg = c.cyan }, "keywords")
-	hl.Exception = { fg = c.cyan }
+	hl.Keyword = S_({ fg = c.teal }, "keywords")
+	hl.Exception = { fg = c.teal }
 	hl.PreProc = { fg = c.teal }
 	hl.Include = { fg = c.teal }
 	hl.Define = { fg = c.teal }
 	hl.Macro = { fg = c.teal }
-	hl.Type = { fg = c.blue }
+	hl.Type = { fg = c.type_fg }
 	hl.StorageClass = { fg = c.teal }
 	hl.Structure = { fg = c.teal }
 	hl.Typedef = { fg = c.teal }
 	hl.Special = { fg = c.magenta }
 	hl.SpecialChar = { fg = c.magenta }
-	hl.Tag = { fg = c.blue }
+	hl.Tag = { fg = c.type_fg }
 	hl.Delimiter = { fg = c.fg_dim }
 	hl.SpecialComment = { fg = c.comment }
 	hl.Debug = { fg = c.red }
 	hl.Error = S_({ fg = c.red, bold = true }, "error")
 	hl.Todo = { fg = c.gold, bold = true }
-
 	hl.NormalFloat = { fg = c.fg, bg = c.bg_float }
 	hl.FloatBorder = { fg = c.border, bg = c.bg_float }
 	hl.FloatTitle = { fg = c.gold, bg = c.bg_float, bold = true }
-
 	hl.DiffAdd = { fg = c.green, bg = "#0f2f24" }
 	hl.DiffChange = { fg = c.orange, bg = "#2a1f0f" }
 	hl.DiffDelete = { fg = c.red, bg = "#2f0f0f" }

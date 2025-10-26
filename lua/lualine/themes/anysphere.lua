@@ -1,9 +1,12 @@
-local fg = "#E4E6EA"
-local fg_dim = "#B9BDC6"
-local bg = "#141414"
+local fg = "#d6d6dd"
+local fg_dim = "#a6a6a6"
+local bg = "#1d1d1d"
 local panel = "#181818"
-local gold = "#E3C893"
-local magenta = "#E394DC"
+local gold = "#e5b95c"
+local magenta = "#e567dc"
+local blue = "#4c9df3"
+local red = "#f14c4c"
+local teal = "#15ac91"
 
 return {
 	normal = {
@@ -17,17 +20,17 @@ return {
 		c = { fg = fg_dim, bg = bg },
 	},
 	visual = {
-		a = { fg = "#0E0E0E", bg = "#8DB8FF", gui = "bold" },
+		a = { fg = "#0E0E0E", bg = blue, gui = "bold" },
 		b = { fg = fg, bg = panel },
 		c = { fg = fg_dim, bg = bg },
 	},
 	replace = {
-		a = { fg = "#0E0E0E", bg = "#E26D76", gui = "bold" },
+		a = { fg = "#0E0E0E", bg = red, gui = "bold" },
 		b = { fg = fg, bg = panel },
 		c = { fg = fg_dim, bg = bg },
 	},
 	command = {
-		a = { fg = "#0E0E0E", bg = "#86D8C7", gui = "bold" },
+		a = { fg = "#0E0E0E", bg = teal, gui = "bold" },
 		b = { fg = fg, bg = panel },
 		c = { fg = fg_dim, bg = bg },
 	},
