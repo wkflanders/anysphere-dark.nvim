@@ -1,12 +1,12 @@
 local fg = "#d6d6dd"
-local fg_dim = "#a6a6a6"
-local bg = "#1d1d1d"
+local fg_dim = "#CCCCCC"
+local bg = "#141414"
 local panel = "#181818"
-local gold = "#e5b95c"
-local magenta = "#e567dc"
-local blue = "#4c9df3"
-local red = "#f14c4c"
-local teal = "#15ac91"
+local gold = "#EFB080"
+local magenta = "#B48EAD"
+local blue = "#81A1C1"
+local red = "#BF616A"
+local teal = "#83D6C5"
 
 return {
 	normal = {
