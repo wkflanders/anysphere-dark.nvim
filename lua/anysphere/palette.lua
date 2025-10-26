@@ -1,4 +1,6 @@
-local C = {
+local M = {}
+
+local default_colors = {
 	bg = "#181818",
 	bg_alt = "#141414",
 	bg_float = "#111111",
@@ -24,4 +26,11 @@ local C = {
 	search = "#E7C547",
 	incsearch = "#F2AE49",
 }
-return C
+
+function M.build(opts)
+	opts = opts or {}
+	local colors = vim.tbl_extend("force", default_colors, opts.colors or {})
+	return colors
+end
+
+return M
