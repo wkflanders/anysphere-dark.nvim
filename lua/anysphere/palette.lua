@@ -1,34 +1,27 @@
-local M = {}
-
--- Base Anysphere Dark palette
-local base = {
-	bg = "#141414",
-	bg_alt = "#181818",
-	bg_float = "#131313",
+local C = {
+	bg = "#181818",
+	bg_alt = "#141414",
+	bg_float = "#111111",
+	line = "#1E1E1E",
+	visual = "#2A2A2A",
+	border = "#2E2E2E",
 	fg = "#E4E6EA",
 	fg_dim = "#B9BDC6",
-	comment = "#7A7A8C",
-	gold = "#E3C893",
-	magenta = "#E394DC",
-	blue = "#8DB8FF",
-	cyan = "#7ED0D3",
-	teal = "#86D8C7",
-	red = "#E26D76",
-	orange = "#E7C888",
-	green = "#0FA287",
-	border = "#2A2A2A",
-	visual = "#2B2B2B",
-	search = "#3C566E",
-	incsearch = "#2E4152",
+	comment = "#6C7280",
+	gold = "#E7C547",
+	cyan = "#7FD1F5",
+	teal = "#5FB3B3",
+	blue = "#87A7FF",
+	lilac = "#D4BFFF",
+	magenta = "#F27CC3",
+	orange = "#F2AE49",
+	red = "#FF6B6B",
+	green = "#79DCAA",
+	diag_hint = "#70E1E8",
+	diag_info = "#87A7FF",
+	diag_warn = "#FFC777",
+	diag_error = "#FF6B6B",
+	search = "#E7C547",
+	incsearch = "#F2AE49",
 }
-
-local function merged(a, b)
-	return vim.tbl_deep_extend("force", a, b or {})
-end
-
-function M.build(opts)
-	-- allow user overrides via opts.colors
-	return merged(vim.deepcopy(base), opts.colors or {})
-end
-
-return M
+return C
