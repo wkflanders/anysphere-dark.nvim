@@ -12,7 +12,7 @@ Neovim port of **Anysphere Dark** by Cursor with tight LazyVim plugin support.
   priority = 1000, -- make sure to load this before all the other plugins
   config = function()
     -- NOTE: you do not need to call setup if you don't want to.
-    require("vague").setup({
+    require("anysphere").setup({
       -- optional configuration here
     })
     vim.cmd("colorscheme anysphere")
