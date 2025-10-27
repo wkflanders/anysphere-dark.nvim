@@ -33,37 +33,39 @@ return function(hl, c, o, S)
 	hl.MoreMsg = { fg = c.gold }
 	hl.Question = { fg = c.blue }
 	hl.QuickFixLine = { bg = "#1c1c1c", bold = true }
+
 	hl.Comment = S_({ fg = c.comment, italic = true }, "comments")
-	hl.Constant = S_({ fg = c.yellow }, "constant")
+	hl.Constant = S_({ fg = c.number }, "constant")
 	hl.String = S_({ fg = c.string }, "strings")
 	hl.Character = { fg = c.string }
-	hl.Number = S_({ fg = c.number }, "number")
-	hl.Boolean = S_({ fg = c.cyan }, "boolean")
-	hl.Identifier = S_({ fg = c.fg }, "variables")
-	hl.Function = S_({ fg = c.function_fg }, "functions")
-	hl.Statement = { fg = c.teal }
-	hl.Conditional = S_({ fg = c.teal }, "conditionals")
-	hl.Repeat = { fg = c.teal }
-	hl.Label = { fg = c.magenta }
-	hl.Operator = S_({ fg = c.fg }, "operators")
-	hl.Keyword = S_({ fg = c.teal }, "keywords")
-	hl.Exception = { fg = c.teal }
-	hl.PreProc = { fg = c.teal }
-	hl.Include = { fg = c.teal }
-	hl.Define = { fg = c.teal }
-	hl.Macro = { fg = c.teal }
-	hl.Type = { fg = c.type_fg }
-	hl.StorageClass = { fg = c.teal }
-	hl.Structure = { fg = c.teal }
-	hl.Typedef = { fg = c.teal }
+	hl.Number = { fg = c.number }
+	hl.Boolean = { fg = c.cyan }
+	hl.Identifier = { fg = c.fg }
+	hl.Function = { fg = c.function_fg }
+	hl.Statement = { fg = c.cyan }
+	hl.Conditional = { fg = c.cyan }
+	hl.Repeat = { fg = c.cyan }
+	hl.Label = { fg = c.purple }
+	hl.Operator = { fg = c.fg }
+	hl.Keyword = { fg = c.cyan }
+	hl.Exception = { fg = c.cyan }
+	hl.PreProc = { fg = c.purple }
+	hl.Include = { fg = c.cyan }
+	hl.Define = { fg = c.purple }
+	hl.Macro = { fg = c.purple }
+	hl.Type = { fg = c.tag_blue }
+	hl.StorageClass = { fg = c.cyan }
+	hl.Structure = { fg = c.tag_blue }
+	hl.Typedef = { fg = c.tag_blue }
 	hl.Special = { fg = c.magenta }
 	hl.SpecialChar = { fg = c.magenta }
-	hl.Tag = { fg = c.type_fg }
+	hl.Tag = { fg = c.tag_blue }
 	hl.Delimiter = { fg = c.fg_dim }
 	hl.SpecialComment = { fg = c.comment }
 	hl.Debug = { fg = c.red }
-	hl.Error = S_({ fg = c.red, bold = true }, "error")
+	hl.Error = { fg = c.red, bold = true }
 	hl.Todo = { fg = c.gold, bold = true }
+
 	hl.NormalFloat = { fg = c.fg, bg = c.bg_float }
 	hl.FloatBorder = { fg = c.border, bg = c.bg_float }
 	hl.FloatTitle = { fg = c.gold, bg = c.bg_float, bold = true }
