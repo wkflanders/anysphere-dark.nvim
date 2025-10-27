@@ -124,9 +124,10 @@ return function(hl, c, o, S)
 		["@lsp.type.operator"] = "@operator",
 		["@lsp.type.string"] = "@string",
 		["@lsp.type.regexp"] = "@string.regex",
-		["@lsp.mod.deprecated"] = { strikethrough = true },
 	}
 	for a, b in pairs(lsp) do
 		util.link(a, b)
 	end
+
+	hl["@lsp.mod.deprecated"] = { strikethrough = true }
 end
