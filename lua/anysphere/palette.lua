@@ -12,25 +12,24 @@ local default_colors = {
 	fg_dim = "#CCCCCC",
 	comment = "#6d6d6d",
 
-	cyan = "#88C0D0",
+	cyan = "#4EC9B0",
 	blue = "#81A1C1",
 	green = "#A3BE8C",
 	red = "#BF616A",
 	yellow = "#EBCB8B",
 
-	-- more vivid to match your “supposed to look like” screenshots
-	magenta = "#E06CFF",
+	magenta = "#C586C0",
 	purple = "#AA9BF5",
-	teal = "#83D6C5",
-	orange = "#EA7620",
-	gold = "#EFB080",
+	teal = "#4EC9B0",
+	orange = "#CE9178",
+	gold = "#DCDCAA",
 
-	string = "#E394DC",
-	number = "#EBC88D",
+	string = "#CE9178",
+	number = "#B5CEA8",
 
-	function_fg = "#EFB080",
-	type_fg = "#87C3FF",
-	property_fg = "#AA9BF5",
+	function_fg = "#DCDCAA",
+	type_fg = "#4EC9B0",
+	property_fg = "#9CDCFE",
 	link_blue = "#4C9DF3",
 
 	search = "#465C63",
