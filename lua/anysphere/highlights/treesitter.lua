@@ -3,20 +3,43 @@ local util = require("anysphere.util")
 return function(hl, c, o, S)
 	util.link("@comment", "Comment")
 	util.link("@constant", "Constant")
+	util.link("@constant.builtin", "Constant")
 	util.link("@string", "String")
 	util.link("@number", "Number")
 	util.link("@boolean", "Boolean")
-	util.link("@function", "Function")
-	util.link("@method", "Function")
+
 	util.link("@keyword", "Keyword")
+	util.link("@keyword.function", "Keyword")
+	util.link("@keyword.operator", "Keyword")
+	util.link("@keyword.return", "Keyword")
+	util.link("@keyword.import", "Keyword")
+	util.link("@type.qualifier", "Keyword")
+
 	util.link("@type", "Type")
-	util.link("@variable", "Identifier")
-	util.link("@field", "Identifier")
-	util.link("@property", "Identifier")
-	util.link("@parameter", "Identifier")
-	util.link("@tag", "Tag")
-	util.link("@attribute", "Type")
+	util.link("@type.builtin", "Type")
 	util.link("@namespace", "Type")
+	util.link("@module", "Type")
+	util.link("@tag", "Type")
+
+	util.link("@function", "Function")
+	util.link("@function.call", "Function")
+	util.link("@method", "Function")
+	util.link("@constructor", "Function")
+
+	util.link("@variable", "Identifier")
+	util.link("@field", "Field")
+	util.link("@property", "Property")
+	util.link("@attribute", "Property")
+	util.link("@parameter", "Parameter")
+
+	util.link("@character", "String")
+	util.link("@string.regex", "String")
+	util.link("@string.escape", "String")
+
+	util.link("@operator", "Operator")
+	util.link("@punctuation", "Delimiter")
+	util.link("@punctuation.bracket", "Delimiter")
+	util.link("@punctuation.delimiter", "Delimiter")
 
 	local legacy = {
 		TSComment = "@comment",
@@ -62,8 +85,10 @@ return function(hl, c, o, S)
 		["@lsp.type.struct"] = "@type",
 		["@lsp.type.type"] = "@type",
 		["@lsp.type.typeParameter"] = "@type",
+		["@lsp.type.namespace"] = "@type",
 		["@lsp.type.parameter"] = "@parameter",
 		["@lsp.type.property"] = "@property",
+		["@lsp.type.field"] = "@field",
 		["@lsp.type.variable"] = "@variable",
 		["@lsp.type.function"] = "@function",
 		["@lsp.type.method"] = "@method",
@@ -74,7 +99,6 @@ return function(hl, c, o, S)
 		["@lsp.type.operator"] = "@operator",
 		["@lsp.type.string"] = "@string",
 		["@lsp.type.regexp"] = "@string.regex",
-		["@lsp.type.namespace"] = "@namespace",
 	}
 	for a, b in pairs(lsp) do
 		util.link(a, b)

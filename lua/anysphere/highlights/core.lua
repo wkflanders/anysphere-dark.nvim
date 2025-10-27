@@ -66,6 +66,10 @@ return function(hl, c, o, S)
 	hl.Error = { fg = c.red, bold = true }
 	hl.Todo = { fg = c.gold, bold = true }
 
+	hl.Property = { fg = c.property_fg }
+	hl.Field = { fg = c.property_fg }
+	hl.Parameter = { fg = c.number }
+
 	hl.NormalFloat = { fg = c.fg, bg = c.bg_float }
 	hl.FloatBorder = { fg = c.border, bg = c.bg_float }
 	hl.FloatTitle = { fg = c.gold, bg = c.bg_float, bold = true }
