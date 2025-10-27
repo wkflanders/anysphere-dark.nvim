@@ -61,10 +61,10 @@ return function(hl, c, o, S)
 	hl.Exception = { fg = c.magenta }
 	hl.Statement = { fg = c.magenta }
 
-	hl.Type = S.apply_style({ fg = c.teal }, "builtin_types", o)
-	hl.StorageClass = { fg = c.teal }
-	hl.Structure = { fg = c.teal }
-	hl.Typedef = { fg = c.teal }
+	hl.Type = S.apply_style({ fg = c.type_fg }, "builtin_types", o)
+	hl.StorageClass = { fg = c.type_fg }
+	hl.Structure = { fg = c.type_fg }
+	hl.Typedef = { fg = c.type_fg }
 
 	hl.Function = S.apply_style({ fg = c.function_fg }, "functions", o)
 
@@ -73,14 +73,14 @@ return function(hl, c, o, S)
 
 	hl.Number = S.apply_style({ fg = c.number }, "number", o)
 	hl.Float = S.apply_style({ fg = c.number }, "float", o)
-	hl.Boolean = S.apply_style({ fg = "#569CD6", bold = true }, "boolean", o)
+	hl.Boolean = S.apply_style({ fg = c.magenta, bold = true }, "boolean", o)
 
-	hl.Constant = S.apply_style({ fg = "#4FC1FF" }, "builtin_constants", o)
+	hl.Constant = S.apply_style({ fg = c.magenta }, "builtin_constants", o)
 
 	hl.Identifier = S.apply_style({ fg = c.fg }, "variables", o)
 	hl.Field = { fg = c.property_fg }
 	hl.Property = { fg = c.property_fg }
-	hl.Parameter = { fg = "#9CDCFE" }
+	hl.Parameter = { fg = c.fg }
 
 	hl.Operator = S.apply_style({ fg = c.fg }, "operators", o)
 	hl.Delimiter = { fg = c.fg }
