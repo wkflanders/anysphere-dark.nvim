@@ -24,12 +24,13 @@ local default_colors = {
 	orange = "#EA7620",
 	gold = "#EFB080",
 
-	string = "#E394DC",
+	string = "#E06CFF",
 	number = "#EBC88D",
 
 	function_fg = "#EFB080",
-	type_fg = "#87C3FF",
-	property_fg = "#AA9BF5",
+	type_fg = "#EFB080",
+	property_fg = "#E06CFF",
+	keyword_fg = "#83D6C5",
 	link_blue = "#4C9DF3",
 
 	search = "#465C63",

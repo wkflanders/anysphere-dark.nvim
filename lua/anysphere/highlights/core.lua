@@ -1,5 +1,6 @@
 return function(hl, c, o, S)
 	hl.Normal = { fg = c.fg, bg = c.bg }
+	hl.NormalNC = { fg = c.fg, bg = c.bg }
 	hl.NormalFloat = { fg = c.fg, bg = c.bg_float }
 	hl.FloatBorder = { fg = c.border, bg = c.bg_float }
 	hl.FloatTitle = { fg = c.gold, bg = c.bg_float, bold = true }
@@ -19,7 +20,7 @@ return function(hl, c, o, S)
 	hl.PmenuThumb = { bg = c.border }
 
 	hl.StatusLine = { fg = c.fg, bg = c.bg_alt }
-	hl.StatusLineNC = { fg = c.fg_dim, bg = c.bg_alt }
+	hl.StatusLineNC = { fg = c.fg, bg = c.bg_alt }
 	hl.TabLine = { fg = c.fg_dim, bg = c.bg_alt }
 	hl.TabLineFill = { bg = c.bg_alt }
 	hl.TabLineSel = { fg = "#FFFFFF", bg = c.visual, bold = true }
@@ -54,12 +55,12 @@ return function(hl, c, o, S)
 
 	hl.Comment = S.apply_style({ fg = c.comment }, "comments", o)
 
-	hl.Keyword = S.apply_style({ fg = c.magenta }, "keywords", o)
-	hl.Conditional = { fg = c.magenta }
-	hl.Repeat = { fg = c.magenta }
-	hl.Label = { fg = c.magenta }
-	hl.Exception = { fg = c.magenta }
-	hl.Statement = { fg = c.magenta }
+	hl.Keyword = S.apply_style({ fg = c.keyword_fg }, "keywords", o)
+	hl.Conditional = { fg = c.keyword_fg }
+	hl.Repeat = { fg = c.keyword_fg }
+	hl.Label = { fg = c.keyword_fg }
+	hl.Exception = { fg = c.keyword_fg }
+	hl.Statement = { fg = c.keyword_fg }
 
 	hl.Type = S.apply_style({ fg = c.type_fg }, "builtin_types", o)
 	hl.StorageClass = { fg = c.type_fg }
@@ -73,9 +74,9 @@ return function(hl, c, o, S)
 
 	hl.Number = S.apply_style({ fg = c.number }, "number", o)
 	hl.Float = S.apply_style({ fg = c.number }, "float", o)
-	hl.Boolean = S.apply_style({ fg = c.magenta, bold = true }, "boolean", o)
+	hl.Boolean = S.apply_style({ fg = c.keyword_fg }, "boolean", o)
 
-	hl.Constant = S.apply_style({ fg = c.magenta }, "builtin_constants", o)
+	hl.Constant = S.apply_style({ fg = c.keyword_fg }, "builtin_constants", o)
 
 	hl.Identifier = S.apply_style({ fg = c.fg }, "variables", o)
 	hl.Field = { fg = c.property_fg }
@@ -86,15 +87,15 @@ return function(hl, c, o, S)
 	hl.Delimiter = { fg = c.fg }
 	hl.Special = { fg = c.cyan }
 	hl.SpecialChar = { fg = c.cyan }
-	hl.Tag = { fg = c.cyan }
+	hl.Tag = { fg = c.keyword_fg }
 	hl.SpecialComment = { fg = c.comment, italic = true }
 	hl.Debug = { fg = c.red }
 
-	hl.PreProc = { fg = c.magenta }
-	hl.Include = { fg = c.magenta }
-	hl.Define = { fg = c.magenta }
-	hl.Macro = { fg = c.magenta }
-	hl.PreCondit = { fg = c.magenta }
+	hl.PreProc = { fg = c.keyword_fg }
+	hl.Include = { fg = c.keyword_fg }
+	hl.Define = { fg = c.keyword_fg }
+	hl.Macro = { fg = c.keyword_fg }
+	hl.PreCondit = { fg = c.keyword_fg }
 
 	hl.Underlined = { underline = true }
 	hl.Ignore = { fg = c.fg_dim }

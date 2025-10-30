@@ -1,66 +1,66 @@
 local util = require("anysphere.util")
 
 return function(hl, c, o, S)
-	util.link("@comment", "Comment")
+	hl["@comment"] = { fg = c.comment }
 
-	util.link("@constant", "Constant")
-	util.link("@constant.builtin", "Boolean")
+	hl["@constant"] = { fg = c.keyword_fg }
+	hl["@constant.builtin"] = { fg = c.keyword_fg }
 
-	util.link("@string", "String")
-	util.link("@character", "String")
-	util.link("@string.regex", "String")
-	util.link("@string.escape", "SpecialChar")
+	hl["@string"] = { fg = c.string }
+	hl["@character"] = { fg = c.string }
+	hl["@string.regex"] = { fg = c.string }
+	hl["@string.escape"] = { fg = c.string }
 
-	util.link("@number", "Number")
-	util.link("@boolean", "Boolean")
-	util.link("@float", "Float")
+	hl["@number"] = { fg = c.number }
+	hl["@boolean"] = { fg = c.keyword_fg }
+	hl["@float"] = { fg = c.number }
 
-	util.link("@keyword", "Keyword")
-	util.link("@keyword.function", "Keyword")
-	util.link("@keyword.operator", "Keyword")
-	util.link("@keyword.return", "Keyword")
-	util.link("@keyword.import", "Keyword")
-	util.link("@conditional", "Conditional")
-	util.link("@repeat", "Repeat")
-	util.link("@exception", "Exception")
-	util.link("@include", "Include")
+	hl["@keyword"] = { fg = c.keyword_fg }
+	hl["@keyword.function"] = { fg = c.keyword_fg }
+	hl["@keyword.operator"] = { fg = c.keyword_fg }
+	hl["@keyword.return"] = { fg = c.keyword_fg }
+	hl["@keyword.import"] = { fg = c.keyword_fg }
+	hl["@conditional"] = { fg = c.keyword_fg }
+	hl["@repeat"] = { fg = c.keyword_fg }
+	hl["@exception"] = { fg = c.keyword_fg }
+	hl["@include"] = { fg = c.keyword_fg }
 
-	util.link("@type", "Type")
-	util.link("@type.builtin", "Type")
-	util.link("@type.qualifier", "Keyword")
-	util.link("@namespace", "Type")
-	util.link("@module", "Type")
-	util.link("@tag", "Type")
-	util.link("@storageclass", "StorageClass")
+	hl["@type"] = { fg = c.type_fg }
+	hl["@type.builtin"] = { fg = c.type_fg }
+	hl["@type.qualifier"] = { fg = c.keyword_fg }
+	hl["@namespace"] = { fg = c.type_fg }
+	hl["@module"] = { fg = c.type_fg }
+	hl["@tag"] = { fg = c.keyword_fg }
+	hl["@storageclass"] = { fg = c.keyword_fg }
 
-	util.link("@function", "Function")
-	util.link("@function.call", "Function")
-	util.link("@function.builtin", "Function")
-	util.link("@method", "Function")
-	util.link("@method.call", "Function")
-	util.link("@constructor", "Function")
+	hl["@function"] = { fg = c.function_fg }
+	hl["@function.call"] = { fg = c.function_fg }
+	hl["@function.builtin"] = { fg = c.function_fg }
+	hl["@method"] = { fg = c.function_fg }
+	hl["@method.call"] = { fg = c.function_fg }
+	hl["@constructor"] = { fg = c.type_fg }
 
-	util.link("@variable", "Identifier")
-	util.link("@variable.builtin", "Constant")
-	util.link("@variable.parameter", "Parameter")
-	util.link("@field", "Field")
-	util.link("@property", "Property")
-	util.link("@attribute", "Property")
-	util.link("@parameter", "Parameter")
+	hl["@variable"] = { fg = c.fg }
+	hl["@variable.builtin"] = { fg = c.keyword_fg }
+	hl["@variable.parameter"] = { fg = c.fg }
+	hl["@field"] = { fg = c.property_fg }
+	hl["@property"] = { fg = c.property_fg }
+	hl["@attribute"] = { fg = c.property_fg }
+	hl["@parameter"] = { fg = c.fg }
 
-	util.link("@operator", "Operator")
-	util.link("@punctuation", "Delimiter")
-	util.link("@punctuation.bracket", "Delimiter")
-	util.link("@punctuation.delimiter", "Delimiter")
-	util.link("@punctuation.special", "SpecialChar")
+	hl["@operator"] = { fg = c.fg }
+	hl["@punctuation"] = { fg = c.fg }
+	hl["@punctuation.bracket"] = { fg = c.type_fg }
+	hl["@punctuation.delimiter"] = { fg = c.fg }
+	hl["@punctuation.special"] = { fg = c.type_fg }
 
-	util.link("@text", "Normal")
-	util.link("@text.strong", "Bold")
-	util.link("@text.emphasis", "Italic")
-	util.link("@text.underline", "Underlined")
-	util.link("@text.title", "Title")
-	util.link("@text.literal", "String")
-	util.link("@text.uri", "Underlined")
+	hl["@text"] = { fg = c.fg }
+	hl["@text.strong"] = { bold = true }
+	hl["@text.emphasis"] = { italic = true }
+	hl["@text.underline"] = { underline = true }
+	hl["@text.title"] = { fg = c.gold, bold = true }
+	hl["@text.literal"] = { fg = c.string }
+	hl["@text.uri"] = { fg = c.string, underline = true }
 
 	local legacy = {
 		TSComment = "@comment",
