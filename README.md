@@ -8,14 +8,11 @@ Neovim port of **Anysphere Dark** by Cursor with tight LazyVim plugin support.
 -- lazy.nvim spec
 {
   "wkflanders/anysphere-dark.nvim",
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other plugins
+  name = "anysphere-dark",
+  lazy = false,
+  priority = 1000,
   config = function()
-    -- NOTE: you do not need to call setup if you don't want to.
-    require("anysphere").setup({
-      -- optional configuration here
-    })
-    vim.cmd("colorscheme anysphere")
-  end
+    vim.cmd.colorscheme("anysphere")
+  end,
 },
 ```
